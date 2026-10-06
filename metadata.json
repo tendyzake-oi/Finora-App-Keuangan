@@ -1,0 +1,6 @@
+{
+  "name": "Finora - Smart Financial Management",
+  "description": "Aplikasi laporan keuangan pribadi dan UMKM cerdas dengan analisis AI Gemini, manajemen transaksi lengkap, dan pelacakan anggaran.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

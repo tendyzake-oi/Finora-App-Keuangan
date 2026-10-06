@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Budi Santoso",
+      "email": "budi@finora.id",
+      "password_hash": "$2b$10$brgnEuPGpeTagBtQuWdNpuVfXZE8PDWJBz3z8P8ZE1QFKAtcgGchK",
+      "monthly_budget_limit": 5000000,
+      "created_at": "2026-10-03T08:05:56.217Z"
+    },
+    {
+      "id": 2,
+      "name": "Budi santoso",
+      "email": "budisantoso@gmail.com",
+      "password_hash": "$2b$10$mu8BkgxMMSsxqMC6gvsZaep2n1T0d/RBNcjH5DIzVh6VTUUf9sHBq",
+      "monthly_budget_limit": 5000000,
+      "created_at": "2026-10-03T08:07:29.809Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 15500000,
+      "description": "Penjualan batch pertama kue kering lebaran",
+      "transaction_date": "2026-09-02",
+      "created_at": "2026-09-02T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "type": "expense",
+      "category": "Bahan Baku",
+      "amount": 4200000,
+      "description": "Pembelian tepung, mentega, dan coklat premium",
+      "transaction_date": "2026-09-05",
+      "created_at": "2026-09-05T14:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "type": "expense",
+      "category": "Operasional & Utilitas",
+      "amount": 1250000,
+      "description": "Listrik, air galon, dan gas oven",
+      "transaction_date": "2026-09-10",
+      "created_at": "2026-09-10T09:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 8750000,
+      "description": "Pesanan snack box catering kantor dinas",
+      "transaction_date": "2026-09-18",
+      "created_at": "2026-09-18T16:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "type": "expense",
+      "category": "Gaji Karyawan",
+      "amount": 5000000,
+      "description": "Gaji 2 orang asisten produksi bulan September",
+      "transaction_date": "2026-09-28",
+      "created_at": "2026-09-28T18:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 18200000,
+      "description": "Pesanan kue tart & hampers bulan Oktober",
+      "transaction_date": "2026-10-01",
+      "created_at": "2026-10-01T11:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "type": "expense",
+      "category": "Bahan Baku",
+      "amount": 4800000,
+      "description": "Stok mentega Wijsman dan keju edam",
+      "transaction_date": "2026-10-02",
+      "created_at": "2026-10-02T13:15:00.000Z"
+    },
+    {
+      "id": 8,
+      "user_id": 1,
+      "type": "expense",
+      "category": "Pemasaran & Iklan",
+      "amount": 750000,
+      "description": "Iklan Instagram Ads & TikTok Shop Promo",
+      "transaction_date": "2026-10-03",
+      "created_at": "2026-10-03T08:45:00.000Z"
+    },
+    {
+      "id": 9,
+      "user_id": 2,
+      "type": "expense",
+      "category": "Bensin",
+      "amount": 25000,
+      "description": "Isi bensin",
+      "transaction_date": "2026-10-03",
+      "created_at": "2026-10-03T08:08:08.009Z"
+    },
+    {
+      "id": 10,
+      "user_id": 2,
+      "type": "expense",
+      "category": "Makan",
+      "amount": 20000,
+      "description": "Kosumsi makan siang",
+      "transaction_date": "2026-10-03",
+      "created_at": "2026-10-03T08:12:26.435Z"
+    }
+  ],
+  "lastUserId": 2,
+  "lastTransactionId": 10
+}
