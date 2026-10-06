@@ -1,4 +1,4 @@
 import app from '../backend/app';
 
-// Export Express app as Vercel Serverless Function entry point
+// Vercel Serverless Function entry point for root /api
 export default app;

@@ -41,12 +41,31 @@ async function request<T>(
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  const res = await fetch(endpoint, {
-    ...options,
-    headers,
-  });
+  let res: Response;
+  try {
+    res = await fetch(endpoint, {
+      ...options,
+      headers,
+    });
+  } catch (netErr: any) {
+    throw new Error(`Gagal terhubung ke server: ${netErr.message || 'Periksa koneksi internet Anda.'}`);
+  }
 
-  const body = await res.json().catch(() => ({ success: false, message: 'Respon server tidak valid' }));
+  let body: any;
+  const contentType = res.headers.get('content-type') || '';
+  if (contentType.includes('application/json')) {
+    body = await res.json().catch(() => null);
+  } else {
+    // If non-JSON received (e.g. HTML from a rewrite error)
+    if (!res.ok) {
+      throw new Error(`Server error (${res.status}): Terjadi kendala pada server.`);
+    }
+    throw new Error('Respon server tidak valid (mengembalikan HTML alih-alih data JSON).');
+  }
+
+  if (!body) {
+    throw new Error('Respon server kosong atau tidak valid.');
+  }
 
   if (!res.ok) {
     throw new Error(body.message || `Request gagal dengan status ${res.status}`);

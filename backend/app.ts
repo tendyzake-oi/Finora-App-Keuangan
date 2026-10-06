@@ -26,6 +26,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// Normalize Vercel catch-all URL parameters if needed
+app.use((req, _res, next) => {
+  if (req.query && Array.isArray(req.query.all)) {
+    const subpath = (req.query.all as string[]).join('/');
+    if (!req.url.includes(subpath)) {
+      req.url = `/api/${subpath}`;
+    }
+  }
+  next();
+});
+
 // Idempotent DB initialization
 let dbInitialized = false;
 export async function ensureDb(): Promise<void> {
