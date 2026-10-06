@@ -1,6 +1,4 @@
 import app from '../backend/app';
 
-// Export handler for Vercel Serverless Functions
-export default function handler(req: any, res: any) {
-  return app(req, res);
-}
+// Export Express app as Vercel Serverless Function entry point
+export default app;
